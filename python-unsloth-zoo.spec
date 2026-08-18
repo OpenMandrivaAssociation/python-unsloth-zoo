@@ -40,6 +40,12 @@ Helper library used by Unsloth for model patching, checkpoint
 handling and export helpers. Install python-unsloth for the
 fine-tuning frontend.
 
+# pip writes .pyc then touches .py; extra tests treat that as
+# python-bytecode-inconsistent-mtime (100+ files, over the badness cap).
+%install -a
+find %{buildroot} -type d -name '__pycache__' -exec rm -rf {} +
+find %{buildroot} -name '*.pyc' -delete
+
 %files
 %doc README.md
 %license LICENSE
