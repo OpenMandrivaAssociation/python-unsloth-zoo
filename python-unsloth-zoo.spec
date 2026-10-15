@@ -1,6 +1,6 @@
 Name:		python-unsloth-zoo
 Version:	2026.8.12
-Release:	1
+Release:	2
 Summary:	Shared utilities for Unsloth fine-tuning
 License:	LGPL-3.0-or-later
 Group:		Development/Python
@@ -9,7 +9,7 @@ Source0:	https://files.pythonhosted.org/packages/source/u/unsloth-zoo/unsloth_zo
 BuildArch:	noarch
 BuildSystem:	python
 BuildRequires:	python
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python3)
 BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	python%{pyver}dist(setuptools-scm)
